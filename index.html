@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Project Vue</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+		integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+	<section id="app" class="calculate">
+		<div class="calculate__container">
+
+			<h1 class="calculate__title">Рассчет среднего значения</h1>
+			<hr>
+			<ul class="calculate__list-inputs">
+				<li class="calculate__li-input" v-for="(item, index) in items">
+					<label class="calculate__input-label" :for="index">Значение {{index+1}}:</label>
+					<input type="number" class="calculate__input-num" :name="index" :id="index">
+				</li>
+			</ul>
+			<hr>
+			<div class="calculate__btns-wrapper">
+				<button class="btn btn-primary calculate__more-input-btn" @click="updateList">Добавить данныe</button>
+				<button @click="inputValueCalc" class="calculate__btn btn btn-success">Посчитай среднее!</button>
+			</div>
+			<hr>
+			<div class="calculate__result">
+				<p class="calculate__result-value">Среднее значение: <b> {{midleVal}}</b></p>
+			</div>
+			<hr>
+		</div>
+
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
