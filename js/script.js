@@ -12,9 +12,13 @@ var app = new Vue({
     },
     average: function () {
     },
-    updateList() {
+    addInput() {
       let newItem = this.items.length + 1;
       return this.items.push(newItem);
+    },
+    removeInput() {
+      // let newItem = this.items.length - 1;
+      return this.items.pop();
     },
     inputValueCalc() {
       let inputs = document.querySelectorAll(".calculate__input-num");
@@ -26,8 +30,15 @@ var app = new Vue({
         sum += inputVal;
       }
       return this.midleVal = sum / inputs.length;
-    }
-
+    },
+    // deleteInput() {
+    //   let delBtn = document.querySelectorAll(".calculate__del-input");
+    //   delBtn.forEach(function (item) {
+    //     item.addEventListener("click", function () {
+    //       item.parentNode.parentNode.removeChild(item.parentNode);
+    //     });
+    //   });
+    // }
   },
   computed: {
 
