@@ -35,15 +35,22 @@
   gap: 10px;
 }
 
-.calculate__btns-wrapper {
+.calculate__li-input {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.calculate__btns-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
+}
+
+.btn {
+  height: 100%;
+  width: 100%;
+  padding: initial;
 }
