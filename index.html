@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Project Vue</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-		integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" -->
+	<!-- integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="css/style.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,7 +15,7 @@
 	<section id="app" class="calculate">
 		<div class="calculate__container">
 
-			<h1 class="calculate__title">Рассчет среднего значения</h1>
+			<h1 class="calculate__title">Расчет среднего значения</h1>
 			<hr>
 			<ul class="calculate__list-inputs">
 				<li class="calculate__li-input" v-for="(item, index) in items">
@@ -25,9 +25,9 @@
 			</ul>
 			<hr>
 			<div class="calculate__btns-wrapper">
-				<button @click="addInput" class="btn btn-primary calculate__more-input-btn">Добавить данныe</button>
-				<button @click="removeInput" class="calculate__del-input btn btn-warning">Удалить</button>
-				<button @click="inputValueCalc" class="calculate__btn btn btn-success">Посчитай среднее!</button>
+				<button @click="addInput" class="btn calculate__more-input-btn">Добавить данныe</button>
+				<button @click="removeInput" class="btn calculate__del-input">Удалить</button>
+				<button @click="inputValueCalc" class="btn calculate__btn">Посчитай среднее!</button>
 			</div>
 			<hr>
 			<div class="calculate__result">
