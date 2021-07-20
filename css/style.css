@@ -1,5 +1,22 @@
+:root {
+  --main-h: 221;
+  --main-s: 100%;
+  --main-l: 23%;
+  --main-o: 1;
+  --main-color: hsla(
+    var(--main-h),
+    var(--main-s),
+    var(--main-l),
+    var(--main-o)
+  );
+}
+* {
+  box-sizing: border-box;
+}
 body {
-  background-color: #003976;
+  --main-l: 50%;
+  background-color: hsla(var(--main-h), var(--main-s), var(--main-l), 1);
+  margin: 0;
 }
 
 .calculate {
@@ -9,9 +26,11 @@ body {
   min-height: 100vh;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .calculate {
-    padding: 10px 20px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -24,10 +43,20 @@ body {
   background-color: #ffffff;
   box-shadow: 0 0 10px 0 #000;
   position: relative;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+  }
 }
 
 .calculate__title {
   text-align: center;
+  margin: 5px 0;
 }
 
 .calculate__list-inputs {
@@ -37,7 +66,7 @@ body {
   gap: 10px;
 }
 
-@media (min-width: 767.98px) {
+@media (min-width: 768px) {
   .calculate__list-inputs {
     width: 300px;
     margin: 0 auto;
@@ -62,6 +91,8 @@ body {
 }
 
 .btn {
+  background: hsla(var(--main-h), var(--main-s), var(--main-l), 1);
+  border: 0;
   height: 100%;
   width: 100%;
   padding: initial;
@@ -71,16 +102,27 @@ body {
   padding: 10px;
   border-radius: 4px;
   font-weight: 700;
+  box-shadow: 0 0 3px 0 black, 0 0 6px 0 black;
 }
 
+.btn {
+  --main-l: 70%;
+}
+
+@media (hover) {
+  .btn:hover {
+    --main-l: 50%;
+    box-shadow: 0 0 5px 0 black;
+  }
+}
 .calculate__more-input-btn {
-  background: blueviolet;
+  --main-h: 200;
 }
-
 .calculate__btn {
-  background: yellowgreen;
+  --main-h: 150;
 }
 
 .calculate__del-input {
-  background: tomato;
+  --main-h: 330;
 }
+
