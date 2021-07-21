@@ -3,16 +3,14 @@
   --main-s: 100%;
   --main-l: 23%;
   --main-o: 1;
-  --main-color: hsla(
-    var(--main-h),
-    var(--main-s),
-    var(--main-l),
-    var(--main-o)
-  );
+  --dark-theme:#0051ff;
+  --light-theme:#4d7ff5;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   --main-l: 50%;
   background-color: hsla(var(--main-h), var(--main-s), var(--main-l), 1);
